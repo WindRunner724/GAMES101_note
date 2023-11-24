@@ -69,7 +69,7 @@
 
 # Course content
 
-<img src="图片\QQ截图20231123153346.png" alt="QQ截图20231123153346" style="zoom:50%;" />
+<img src="images\20231123153346.png" alt="20231123153346" style="zoom:50%;" />
 
 ## Lecture 01 Overview of Computer Graphics
 
@@ -315,7 +315,7 @@
 
         > 近平面内所有点不会变化，远平面的z轴不会变化，远平面的中心点不会变化
 
-        ![QQ截图20231015171150](图片\QQ截图20231015171150.png)
+        ![20231015171150](images\20231015171150.png)
 
         - 利用相似三角形的性质缩放远平面的x，y坐标
         - 利用“近平面所有点不会变化，远平面中心点不会变化”两条性质求出矩阵$M_{persp\rarr ortho}$（第四行的正负影响画面翻转）
@@ -334,7 +334,7 @@
       
       - 正交投影$M_{ortho}$
   
-  <img src="图片\QQ截图20231015162140.png" alt="QQ截图20231015162140" style="zoom:67%;" />
+  <img src="images\20231015162140.png" alt="20231015162140" style="zoom:67%;" />
 
 ## Lecture 05 Rasterization 1 (Triangles)
 
@@ -390,8 +390,8 @@
 
 - 光栅化正方形像素会带来锯齿Jaggies问题，采样率对于信号来说不够高时信号会出现走样（如下图显示三角形时）
 
-  | ![QQ截图20231016154423](图片\QQ截图20231016154423.png) | ![QQ截图20231016154637](图片\QQ截图20231016154637.png) |
-  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![20231016154423](images\20231016154423.png) | ![20231016154637](images\20231016154637.png) |
+  | -------------------------------------------- | -------------------------------------------- |
 
 ##Lecture 06 Rasterization 2 (Antialiasing and Z-Buffering)
 
@@ -408,9 +408,9 @@
 
   - Jaggies：采样前对图像做模糊处理，像素值从0/1离散值转变为连续值；先采样再做模糊处理会出现Blurred Aliasing
 
-    <img src="图片\QQ截图20231019095926.png" alt="QQ截图20231019095926" style="zoom: 33%;" />
+    <img src="images\20231019095926.png" alt="20231019095926" style="zoom: 33%;" />
 
-    <img src="图片\QQ截图20231019100153.png" alt="QQ截图20231019100153" style="zoom: 33%;" />
+    <img src="images\20231019100153.png" alt="20231019100153" style="zoom: 33%;" />
 
 - Frequencies，如$\cos2\pi fx$中。参数$f=\frac{1}{T}$定义了函数的频率，$f$越大频率越高
 
@@ -422,7 +422,7 @@
 
       > 简单理解时域函数为按时间x区分函数值，频率函数按频率区分函数
 
-    <img src="图片\QQ截图20231019102705.png" alt="QQ截图20231019102705" style="zoom: 50%;" />
+    <img src="images\20231019102705.png" alt="20231019102705" style="zoom: 50%;" />
 
     > 高频信号被不充分采样后，采样结果可能显示出低频信号特征，即<u>**Aliases走样**</u>
 
@@ -430,11 +430,11 @@
 
     - 时域图通过傅里叶变换转换为频域图（演示任何信号在不同频率的分布，离原点越远频率越高）
 
-      <img src="图片\QQ截图20231019143115.png" alt="QQ截图20231019143115" style="zoom: 33%;" />
+      <img src="images\20231019143115.png" alt="20231019143115" style="zoom: 33%;" />
 
     - 过滤特定频率信号，右图通过逆傅里叶变换后得到左图
 
-      | <img src="图片\QQ截图20231019150618.png" alt="QQ截图20231019150618" style="zoom:33%;" /> | <img src="图片\QQ截图20231019150651.png" alt="QQ截图20231019150651" style="zoom:33%;" /> |
+      | <img src="images\20231019150618.png" alt="20231019150618" style="zoom:33%;" /> | <img src="images\20231019150651.png" alt="20231019150651" style="zoom:33%;" /> |
       | :----------------------------------------------------------: | :----------------------------------------------------------: |
       |                           高通滤波                           |                           低通滤波                           |
 
@@ -442,7 +442,7 @@
 
       对图像进行卷积操作等价于对源图像傅里叶变换得到的频域图乘以卷积核的频域图的结果经过逆傅里叶变换得到目标图像
 
-      <img src="图片\QQ截图20231019151811.png" alt="QQ截图20231019151811" style="zoom:33%;" />
+      <img src="images\20231019151811.png" alt="20231019151811" style="zoom:33%;" />
 
     - Sampling = Repeating Frequency Contents
 
@@ -450,13 +450,13 @@
 
       - Antialiasing反走样
 
-        <img src="图片\QQ截图20231019212429.png" alt="QQ截图20231019212429" style="zoom:33%;" />
+        <img src="images\20231019212429.png" alt="20231019212429" style="zoom:33%;" />
 
         - 增加采样率
 
         - 模糊后采样，先进行低通滤波再进行采样
 
-          <img src="图片\QQ截图20231019212625.png" alt="QQ截图20231019212625" style="zoom:33%;" />
+          <img src="images\20231019212625.png" alt="20231019212625" style="zoom:33%;" />
 
           - 卷积，使用单像素box进行低通滤波，
           - 采样每个像素中心点
@@ -496,7 +496,7 @@
 
   漫反射的结果应与视角方向没有关系（向所有方向反射）
 
-  <img src="图片\QQ截图20231028102629.png" alt="QQ截图20231028102629" style="zoom: 50%;" />
+  <img src="images\20231028102629.png" alt="20231028102629" style="zoom: 50%;" />
 
 ## Lecture 08 Shading 2 (Shading, Pipeline and Texture Mapping)
 
@@ -513,11 +513,11 @@
 
   $L_s=k_s(I/r^2)\max(0,\cos\alpha)^p=k_s(I/r^2)\max(0,\textbf n\cdot\textbf h)^p$，$k_s$为镜面反射系数，指数$p$圈定高光范围，增加范围外的衰减速度
 
-  <img src="图片\QQ截图20231028144942.png" alt="QQ截图20231028144942" style="zoom:50%;" />
+  <img src="images\20231028144942.png" alt="20231028144942" style="zoom:50%;" />
 
   $L_a=k_aI_a$，$k_a$为环境光系数
 
-​	$L=L_a+L_d+L_s$![QQ截图20231028145451](图片\QQ截图20231028145451.png)
+​	$L=L_a+L_d+L_s$![20231028145451](images\20231028145451.png)
 
 - Shading Frequencies着色频率
   - Flat shading平面着色：计算每个三角形的法线进行均匀着色
@@ -526,7 +526,7 @@
   - **Phong shading**像素着色：计算每个顶点的法线，利用插值计算三角形内部每个点的法线方向，再依据各自法线进行着色
     - Barycentric插值：使用重心坐标进行计算
 
-<img src="图片\QQ截图20231028153524.png" alt="QQ截图20231028153524" style="zoom:50%;" />
+<img src="images\20231028153524.png" alt="20231028153524" style="zoom:50%;" />
 
 - Graphics (Real-time Rendering) Pipeline图形/实时渲染管线，嵌入在硬件中
 
@@ -537,7 +537,7 @@
   - Fragment Processing：对Fragment进行着色，判断可见
   - Framebuffer Operations：将Fragment对应到像素，最终显示出来
 
-  <img src="图片\QQ截图20231028170455.png" alt="QQ截图20231028170455" style="zoom:50%;" />
+  <img src="images\20231028170455.png" alt="20231028170455" style="zoom:50%;" />
 
 - Shader程序
 
@@ -553,7 +553,7 @@
 
   - 纹理坐标系：每个三角形对应到一个纹理坐标(u, v)，利用颜色可视化坐标位置，u越大越红，v越大越绿
 
-    <img src="图片\QQ截图20231028164023.png" alt="QQ截图20231028164023" style="zoom: 50%;" />
+    <img src="images\20231028164023.png" alt="20231028164023" style="zoom: 50%;" />
 
 - Interpolation Across Triagnles: Barycentric Coordinates
   - 根据顶点的纹理坐标，利用插值计算出三角形内部各点的纹理坐标
@@ -580,11 +580,11 @@
 
   - 已知该点位置世界坐标，可根据面积比值计算$(\alpha,\beta,\gamma)$坐标值，$S_{PBC}:S_{PAC}:S_{PAB}=\alpha:\beta:\gamma$
 
-    <img src="图片\QQ截图20231028193253.png" alt="QQ截图20231028193253" style="zoom: 33%;" />
+    <img src="images\20231028193253.png" alt="20231028193253" style="zoom: 33%;" />
 
   - 三角形重心：$\alpha=\beta=\gamma=\frac{1}{3}$
 
-    <img src="图片\QQ截图20231028194022.png" alt="QQ截图20231028194022" style="zoom: 33%;" />
+    <img src="images\20231028194022.png" alt="20231028194022" style="zoom: 33%;" />
 
   - 先在三维空间中做插值，再进行投影（投影会改变重心坐标）
 
@@ -604,19 +604,19 @@
 
       - 在加载纹理时，Mipmap对纹理进行$\log Size$次的预处理，得到各种level下的纹素均值
 
-        <img src="图片\QQ截图20231028210623.png" alt="QQ截图20231028210623" style="zoom: 50%;" />
+        <img src="images\20231028210623.png" alt="20231028210623" style="zoom: 50%;" />
 
       - 实际查询中根据待查询范围所在level，直接得到对应平均值
 
       - 根据相邻像素点映射的纹素点间距离L来确定覆盖范围range所在层级$D=\log_2L$，进而确定对应纹素点的均值=D相邻整数层级$\lfloor D\rfloor,\lfloor D+1\rfloor$对应像素均值的插值，而在层级内部继续进行Bilinear插值，构成**Trilinear Interpolation三线性插值**
 
-      ![QQ截图20231028205651](图片\QQ截图20231028205651.png)
+      ![20231028205651](images\20231028205651.png)
 
       - 在图像远处会出现overblur现象，细节被模糊掉
 
     - Anisotropic Filtering各向异性过滤，独立缩小纹理的长宽，可以查询矩形区域
 
-      <img src="图片\QQ截图20231028220434.png" alt="QQ截图20231028220434" style="zoom: 67%;" /><img src="图片\QQ截图20231028220623.png" alt="QQ截图20231028220623" style="zoom:50%;" />
+      <img src="images\20231028220434.png" alt="20231028220434" style="zoom: 67%;" /><img src="images\20231028220623.png" alt="20231028220623" style="zoom:50%;" />
 
     - EWA filtering：将不规则形状拆分为多个圆形进行查询
 
@@ -628,19 +628,19 @@
 
   - 环境贴图：来自于周围环境的所有光照，假设光源无限远，不会受位置影响
 
-    <img src="图片\QQ截图20231104145338.png" alt="QQ截图20231104145338" style="zoom:50%;" />
+    <img src="images\20231104145338.png" alt="20231104145338" style="zoom:50%;" />
 
     - Spherical Environment Map：将环境光记录在球面上，但展开成矩形时会出现扭曲现象
 
-      <img src="图片\QQ截图20231104152053.png" alt="QQ截图20231104152053" style="zoom:33%;" />
+      <img src="images\20231104152053.png" alt="20231104152053" style="zoom:33%;" />
 
     - Cube Map：使用球的外切立方体来记录环境光纹理映射，但会缺少某些方向的信息
 
-      <img src="图片\QQ截图20231104152205.png" alt="QQ截图20231104152205" style="zoom:33%;" />
+      <img src="images\20231104152205.png" alt="20231104152205" style="zoom:33%;" />
 
   - Bump Mapping法线贴图：纹理影响着色，通过凹凸贴图定义不同位置的不同属性，影响纹理沿法线方向的相对高度；在不改变基本几何形状的基础上，改变纹理高度即不同位置的法线方向来影响着色的明暗
 
-    <img src="图片\QQ截图20231104153140.png" alt="QQ截图20231104153140" style="zoom:33%;" />
+    <img src="images\20231104153140.png" alt="20231104153140" style="zoom:33%;" />
 
     - 定义局部坐标系，设原法线向量$n(p)=(0,0,1)$
     - 点$p$处求偏导
@@ -650,7 +650,7 @@
 
   - Displacement Mapping位移贴图：在凹凸贴图的基础上，真实的移动顶点位置改变几何形状，要求三角形足够细致，频率高于纹理细节（采样率足够）
 
-    <img src="图片\QQ截图20231104155724.png" alt="QQ截图20231104155724" style="zoom:50%;" />
+    <img src="images\20231104155724.png" alt="20231104155724" style="zoom:50%;" />
 
   - Dynamic Tessellation动态曲面细分（DirectX）：先进行法线贴图，后酌情对局部三角形做细分进而位移贴图
 
@@ -667,19 +667,19 @@
 
   - Algebraic Surfaces几何平面，使用数学公式但不直观，难以描述复杂模型
 
-    <img src="图片\QQ截图20231104184626.png" alt="QQ截图20231104184626" style="zoom:33%;" />
+    <img src="images\20231104184626.png" alt="20231104184626" style="zoom:33%;" />
 
   - Constructive Solid Geometry构造实体几何，基本几何的布尔运算
 
-    <img src="图片\QQ截图20231104184552.png" alt="QQ截图20231104184552" style="zoom:33%;" />
+    <img src="images\20231104184552.png" alt="20231104184552" style="zoom:33%;" />
 
   - Distance Functions距离函数，空间中任意一个点到物体表面的距离。将两个物体间的融合转换为各自距离函数SDF的融合，函数为0的位置即物体的表面
 
-    <img src="图片\QQ截图20231104185502.png" alt="QQ截图20231104185502" style="zoom:33%;" />
+    <img src="images\20231104185502.png" alt="20231104185502" style="zoom:33%;" />
 
   - Level Set Methods水平集方法，在水平集中根据函数值取平面；用于医学影像、物理模拟
 
-    <img src="图片\QQ截图20231104185839.png" alt="QQ截图20231104185839" style="zoom: 50%;" />
+    <img src="images\20231104185839.png" alt="20231104185839" style="zoom: 50%;" />
 
   - Fractals分形、自相似
 
@@ -697,12 +697,12 @@
 
     - de Casteljau算法：给定三个点，如需要求$t=t_0$时刻点的位置，则分别求两条线上固定百分比处的点$\textbf b_0^1,\textbf b_1^1$，迭代进行二次连接后求出新线上百分比处的点$b_0^2$
 
-      | <img src="图片\QQ截图20231104194859.png" alt="QQ截图20231104194859" style="zoom:33%;" /> | <img src="图片\QQ截图20231104195858.png" alt="QQ截图20231104195858" style="zoom: 33%;" /> |
+      | <img src="images\20231104194859.png" alt="20231104194859" style="zoom:33%;" /> | <img src="images\20231104195858.png" alt="20231104195858" style="zoom: 33%;" /> |
       | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
     - Bernstein多项式：$\textbf b^n(t)=\textbf b_0^n(t)=\sum\limits_{j=0}^n\textbf b_jB_j^n(t)$，是对1的多项式展开，即任意t时刻，$B_i^n(t)$的和都为1
 
-      <img src="图片\QQ截图20231104204150.png" alt="QQ截图20231104204150" style="zoom:33%;" />
+      <img src="images\20231104204150.png" alt="20231104204150" style="zoom:33%;" />
 
     - 性质
 
@@ -730,7 +730,7 @@
 
   - Bézier Surfaces贝塞尔曲面：由4x4个控制点，在两个方向上分别应用Bézier曲线（类似双线性插值），水平方向上的四个点得到曲线后，在特定时刻四条曲线上的点组成控制点得到竖直方向控制点。给定参数（u,v）得到曲面上的点
 
-    <img src="图片\QQ截图20231104215123.png" alt="QQ截图20231104215123" style="zoom: 33%;" />
+    <img src="images\20231104215123.png" alt="20231104215123" style="zoom: 33%;" />
 
 ## Lecture 12 Geometry 3
 
@@ -740,19 +740,19 @@
 
     分出更多三角形&rarr;调整三角形位置
 
-    <img src="图片\QQ截图20231105150021.png" alt="QQ截图20231105150021" style="zoom: 33%;" />
+    <img src="images\20231105150021.png" alt="20231105150021" style="zoom: 33%;" />
 
     - Loop Subdivision (Triangle Mesh)，分别加权平均更新新/老顶点的位置
 
-      | <img src="图片\QQ截图20231105152520.png" alt="QQ截图20231105152520" style="zoom:33%;" /> | <img src="图片\QQ截图20231105152743.png" alt="QQ截图20231105152743" style="zoom:50%;" /> |
+      | <img src="images\20231105152520.png" alt="20231105152520" style="zoom:33%;" /> | <img src="images\20231105152743.png" alt="20231105152743" style="zoom:50%;" /> |
       | ------------------------------------------------------------ | ------------------------------------------------------------ |
-      |                                                              | <img src="图片\QQ截图20231105153125.png" alt="QQ截图20231105153125" style="zoom:33%;" /> |
+      |                                                              | <img src="images\20231105153125.png" alt="20231105153125" style="zoom:33%;" /> |
 
     - Catmull-Clark Subdivision (General Mesh)，在Non-quad非四边形面中新引入的点为奇异点，经过细分后Non-quad面都被消除。第一次细分后引入Non-quad数量的奇异点，并消除所有Non-quad
 
-      | ![QQ截图20231105154548](图片\QQ截图20231105154548.png) | ![QQ截图20231105154614](图片\QQ截图20231105154614.png) |
-      | ------------------------------------------------------------ | ------------------------------------------------------------ |
-      | ![QQ截图20231105155244](图片\QQ截图20231105155244.png) |                                                              |
+      | ![20231105154548](images\20231105154548.png) | ![20231105154614](images\20231105154614.png) |
+      | -------------------------------------------- | -------------------------------------------- |
+      | ![20231105155244](images\20231105155244.png) |                                              |
 
       
 
@@ -777,15 +777,15 @@
       - Render from Light，记录看到的所有点的深度信息
       - Render from Eye，将看到的点投影回光源成像平面上计算深度，比较光源对应点深度图，深度一致则可视不一致则不可视
 
-      <img src="图片\QQ截图20231105165139.png" alt="QQ截图20231105165139" style="zoom:33%;" />
+      <img src="images\20231105165139.png" alt="20231105165139" style="zoom:33%;" />
 
     - 一定大小的光源，软阴影，模糊边界
 
-      <img src="图片\QQ截图20231105173621.png" alt="QQ截图20231105173621" style="zoom:33%;" />
+      <img src="images\20231105173621.png" alt="20231105173621" style="zoom:33%;" />
 
       - Umbra本影和Penumbra半影
 
-        <img src="图片\QQ截图20231105173724.png" alt="QQ截图20231105173724" style="zoom: 50%;" />
+        <img src="images\20231105173724.png" alt="20231105173724" style="zoom: 50%;" />
 
 ## Lecture 13 Ray Tracing 1 (Whitted-Style Ray Tracing)
 
@@ -802,7 +802,7 @@
   
 - Recursive (Whitted-Style) Ray Tracing
 
-  <img src="图片\QQ截图20231107152210.png" alt="QQ截图20231107152210" style="zoom: 33%;" />
+  <img src="images\20231107152210.png" alt="20231107152210" style="zoom: 33%;" />
 
   - Ray-Surface Interaction
 
@@ -830,21 +830,21 @@
 
       Moller Trumbore算法，将交点表示为重心坐标：$\textbf O+t\textbf D=(1-b_1-b_2)\textbf P_0+b_1\textbf P_1+b_2\textbf P_2$，求解n个式子n个变量的线性方程组，解$t,b_1,b_2$符合条件时（$0\leq t<\infin,b_1>0,b_2>0,1-b_1-b_2>0$）判定点在三角形内
 
-      <img src="图片\QQ截图20231110202457.png" alt="QQ截图20231110202457" style="zoom: 50%;" />
+      <img src="images\20231110202457.png" alt="20231110202457" style="zoom: 50%;" />
 
     - 加速光线与平面求交过程，进一步判断光线与模型相交
 
       - Bounding Volumes，如果没有接触包围体则不会接触物体本身，接触包围体再测试是否解除物体本身
 
-        <img src="图片\QQ截图20231107160517.png" alt="QQ截图20231107160517" style="zoom:33%;" />
+        <img src="images\20231107160517.png" alt="20231107160517" style="zoom:33%;" />
 
       - Bounding Box，将长方体视为the intersection of 3 pairs of slabs，常用**轴对齐包围盒**（Axis-Aligned Bounding Box，**AABB**）
     
-        <img src="图片\QQ截图20231107161003.png" alt="QQ截图20231107161003" style="zoom:33%;" />
+        <img src="images\20231107161003.png" alt="20231107161003" style="zoom:33%;" />
         
       - 光线与AABB相交，2D情形下，分别计算与两个slab平面的交点$(t_\min,t_\max)$，计算两条线段的交集得到与AABB相交的区域
       
-        <img src="图片\QQ截图20231107162155.png" alt="QQ截图20231107162155" style="zoom:50%;" />
+        <img src="images\20231107162155.png" alt="20231107162155" style="zoom:50%;" />
       
       - 光线与AABB相交，3D情形下，光线进入AABB等价于进入所有三对slabs，离开AABB等价于离开任意一对slabs
       
@@ -873,7 +873,7 @@ Using AABBs to accelerate ray tracing
   - Grid Resolution
     - 格子不能太稀疏也不能太密集
 
-  <img src="图片\QQ截图20231107193618.png" alt="QQ截图20231107193618" style="zoom: 33%;" />
+  <img src="images\20231107193618.png" alt="20231107193618" style="zoom: 33%;" />
 
 - Spatial Partitions
 
@@ -883,11 +883,11 @@ Using AABBs to accelerate ray tracing
     - KD-Tree，只将场景分割为两份，依次不同维度划分
     - BSP-Tree，并非轴对齐，高维情况下难以计算
 
-    <img src="图片\QQ截图20231107193730.png" alt="QQ截图20231107193730" style="zoom: 33%;" />
+    <img src="images\20231107193730.png" alt="20231107193730" style="zoom: 33%;" />
 
   - KD-Tree加速预处理，内部结点存储划分的轴向、划分位置、子节点位置，叶子结点存储相交的几何形体列表；难点在于难以判断几何形体与格子的相交关系，一个物体可能同时存在多个叶子结点中
 
-    <img src="图片\QQ截图20231107195553.png" alt="QQ截图20231107195553" style="zoom: 33%;" />
+    <img src="images\20231107195553.png" alt="20231107195553" style="zoom: 33%;" />
 
 - Object Partitions & Bounding Volume Hierarchy (BVH)，按物体划分而不是按空间划分，尽量减少重叠，一个物体只会出现在一个叶子结点中
 
@@ -906,7 +906,7 @@ Using AABBs to accelerate ray tracing
     - 递归的判断光线是否与结点bounding box相交，直至叶子结点
     - 判断是否与叶子结点中每个物体相交
 
-  <img src="图片\QQ截图20231107203442.png" alt="QQ截图20231107203442" style="zoom: 33%;" />
+  <img src="images\20231107203442.png" alt="20231107203442" style="zoom: 33%;" />
 
   |      |                      Spatial Partitions                      |                       Object Partition                       |
   | :--: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -932,20 +932,20 @@ Basic radiometry辐射度量学，描述光照（Radiant flux辐射通量，inte
 
     > 立体角：在三维空间中的角度定义为在球面上覆盖的面积/球面总面积，$\Omega=\frac{A}{r^2}$，**球面有$4\pi$立体角**（对比与二维情形下的弧度定义，角度覆盖的弧长/圆周长）
     >
-    > <img src="图片\QQ截图20231107215254.png" alt="QQ截图20231107215254" style="zoom:33%;" />
+    > <img src="images\20231107215254.png" alt="20231107215254" style="zoom:33%;" />
     >
     > 微分立体角：依靠一个轴向定义两个角度$\theta,\phi$，决定向量方向$\omega$，计算单位矩形的面积$dA=(rd\theta)(r\sin\theta d\phi)=r^2\sin\theta d\theta d\phi$，$d\omega=\frac{dA}{r^2}=\sin\theta d\theta d\phi$，经过球面积分后$\Omega=\int_0^{2\pi}\int_0^\pi\sin\theta d\theta d\phi=4\pi$
     >
-    > <img src="图片\QQ截图20231107215625.png" alt="QQ截图20231107215625" style="zoom:33%;" />
+    > <img src="images\20231107215625.png" alt="20231107215625" style="zoom:33%;" />
 
   - Irradiance：辐射度，单位垂直面积内的辐射通量$E(\textbf x)\equiv\frac{d\Phi(\textbf x)}{dA}\quad [\frac{W}{m^2}][\frac{lm}{m^2}=lux]$
 
   - Radiance：单位立体角、单位垂直面积上发出、反射、传递和接受的能量$L(p,\omega)\equiv\frac{d^2\Phi(p,\omega)}{d\omega dA\cos\theta}=\frac{dE(p)}{d\omega\cos\theta}=\frac{dI(p,\omega)}{dA\cos\theta}$，同时包含入射和出射两种情况，视为在Irradiance的基础上在限定方向上收到的能量，即Irradiance不具有方向性
 
-    <img src="图片\QQ截图20231112102907.png" alt="QQ截图20231112102907" style="zoom:50%;" />
+    <img src="images\20231112102907.png" alt="20231112102907" style="zoom:50%;" />
   
   
-  <img src="图片\QQ截图20231107214007.png" alt="QQ截图20231107214007" style="zoom: 33%;" />
+  <img src="images\20231107214007.png" alt="20231107214007" style="zoom: 33%;" />
 
 ## Lecture 15 Ray Tracing 3 (Light Transport & Global Illumination)
 
@@ -955,7 +955,7 @@ $f_r(\omega_i\rarr\omega_r)=\frac{dL_r(\omega_r)}{dE_i(\omega_i)}=\frac{dL_r(\om
 
 对所有方向的入射光进行积分，得到某个出射角的光照；需要递归计算，考虑其他物体的反射光
 
-<img src="图片\QQ截图20231112105624.png" alt="QQ截图20231112105624" style="zoom:33%;" />
+<img src="images\20231112105624.png" alt="20231112105624" style="zoom:33%;" />
 
 渲染方程：在反射方程的基础上加上自发光
 
@@ -1002,7 +1002,7 @@ PDF（Probability Distribution Function, 概率密度函数）
 
 > Whitted-style ray tracing：在光滑物体进行反射、折射，在漫反射物体上停止反射；效果有限，漫反射物体也应该反射光线
 
-<img src="图片\QQ截图20231112155351.png" alt="QQ截图20231112155351" style="zoom: 50%;" />
+<img src="images\20231112155351.png" alt="20231112155351" style="zoom: 50%;" />
 
 **反射方程的蒙特卡洛解**：将影响着色点的光视为在球面立体角上均匀分布$L_o(p,\omega_0)=\int_{\Omega+}L_i(p,\omega_i)f_r(p,\omega_i,\omega_o)(n\cdot\omega_i)d\omega_i,\quad\int_a^bf(x)dx\approx\frac{1}{N}\sum\limits^{N}_{k=1}\frac{f(X_k)}{p(X_k)}\quad X_k\sim p(x)$
 
@@ -1028,7 +1028,7 @@ $f(x)=L_i(p,\omega_i)f_r(p,\omega_i,\omega_o)(n\cdot\omega_i),\quad p(\omega_i)=
 
 随机取样方法的效率不足，需要投射大量光线来感受到光源
 
-<img src="图片\QQ截图20231113144126.png" alt="QQ截图20231113144126" style="zoom: 33%;" />
+<img src="images\20231113144126.png" alt="20231113144126" style="zoom: 33%;" />
 
 不再在立体角上采样光线，而是在光源上采样，此时需要将光源平面投影到半球面，根据投影面积计算立体角$dw=\frac{dA\cos\theta'}{||x'-x||^2}$
 
@@ -1055,7 +1055,7 @@ $f(x)=L_i(p,\omega_i)f_r(p,\omega_i,\omega_o)(n\cdot\omega_i),\quad p(\omega_i)=
 
 额外考虑着色点和光源间的遮挡，遮挡则为0
 
-<img src="图片\QQ截图20231113155011.png" alt="QQ截图20231113155011" style="zoom: 50%;" />
+<img src="images\20231113155011.png" alt="20231113155011" style="zoom: 50%;" />
 
 ---
 
@@ -1093,7 +1093,7 @@ $f_r=\frac{\rho}{\pi}$，其中$\rho$为反射率albedo
 
 |                  **Glossy Material (BRDF)**                  |      **Ideal reflective / refractive material (BSDF)**       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="图片\QQ截图20231118101931.png" alt="QQ截图20231118101931" style="zoom: 50%;" /> | <img src="图片\QQ截图20231118102521.png" alt="QQ截图20231118102521" style="zoom: 50%;" /> |
+| <img src="images\20231118101931.png" alt="20231118101931" style="zoom: 50%;" /> | <img src="images\20231118102521.png" alt="20231118102521" style="zoom: 50%;" /> |
 
 **BSDF**=**BRDF**+**BTDF**，折射=Transmiter
 
@@ -1105,7 +1105,7 @@ $\omega_o+\omega_i=2\cos\theta\vec n=2(\omega_i\cdot\vec n)\vec n$，入射角=�
 
 Snell's Law：$\eta_i\sin\theta_i=\eta_t\sin\theta_t$，入射角与折射角成比例$\eta_i \sin\theta_i=\eta_t\sin\theta_t$，其中$\eta$为不同介质中的折射率，方位角仍然相反
 
-| <img src="图片\QQ截图20231118103645.png" alt="QQ截图20231118103645" style="zoom: 33%;" /> | <img src="图片\QQ截图20231118204509.png" alt="QQ截图20231118204509" style="zoom:33%;" /> |
+| <img src="images\20231118103645.png" alt="20231118103645" style="zoom: 33%;" /> | <img src="images\20231118204509.png" alt="20231118204509" style="zoom:33%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 
 
@@ -1114,7 +1114,7 @@ Snell's Law：$\eta_i\sin\theta_i=\eta_t\sin\theta_t$，入射角与折射角成
 
 当$\eta_i>\eta_t$时，即光线从更密的介质向更薄的介质传播时，会出现全反射现象，如下图中fov超过97.2度的部分被全反射
 
-<img src="图片\QQ截图20231118104458.png" alt="QQ截图20231118104458" style="zoom: 33%;" />
+<img src="images\20231118104458.png" alt="20231118104458" style="zoom: 33%;" />
 
 **Fresnel Reflection / Term，菲涅尔项**
 
@@ -1122,11 +1122,11 @@ Snell's Law：$\eta_i\sin\theta_i=\eta_t\sin\theta_t$，入射角与折射角成
 
 |             Dielectric绝缘体菲涅尔项，$\eta=1.5$             |                    Conductor导体菲涅尔项                     |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="图片\QQ截图20231118105424.png" alt="QQ截图20231118105424" style="zoom: 33%;" /> | <img src="图片\QQ截图20231118110034.png" alt="QQ截图20231118110034" style="zoom: 33%;" /> |
+| <img src="images\20231118105424.png" alt="20231118105424" style="zoom: 33%;" /> | <img src="images\20231118110034.png" alt="20231118110034" style="zoom: 33%;" /> |
 
 精准计算：分别计算极化方向再取平均
 
-<img src="图片\QQ截图20231118110407.png" alt="QQ截图20231118110407" style="zoom:33%;" />
+<img src="images\20231118110407.png" alt="20231118110407" style="zoom:33%;" />
 
 近似计算：**Schlick's approximation**，取R(0)=R~0~，R(&pi;/2)=1的过渡函数
 
@@ -1147,7 +1147,7 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
     - concentrated = glossy，将基本平整的平面视为glossy材质
     - spread = diffuse，将粗糙表面视为diffuse材质
 
-    <img src="图片\QQ截图20231118194219.png" alt="QQ截图20231118194219" style="zoom: 33%;" />
+    <img src="images\20231118194219.png" alt="20231118194219" style="zoom: 33%;" />
 
     **BRDF**：$f(\textbf i,\textbf o)=\frac{\textbf F(\textbf i,\textbf h)\textbf G(\textbf i,\textbf o,\textbf h)\textbf D(\textbf h)}{4(\textbf n,\textbf i)(\textbf n,\textbf o)}$，$\textbf F(\textbf i,\textbf h)$菲涅尔项，$\textbf G(\textbf i,\textbf o,\textbf h)$几何项考虑自遮挡现象，$\textbf D(\textbf h)$法线分布
 
@@ -1155,7 +1155,7 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
 
   $f_r(\theta_i,\phi_i;\theta_r,\phi_r)\neq f_r(\theta_i,\theta_r,\phi_r-\phi_i)$，旋转方位角后BRDF即各向异性
 
-  <img src="图片\QQ截图20231118200357.png" alt="QQ截图20231118200357" style="zoom: 33%;" />
+  <img src="images\20231118200357.png" alt="20231118200357" style="zoom: 33%;" />
 
 ---
 
@@ -1165,11 +1165,11 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
 
 - 线性，$L_r(p,\omega_r)=\int_{H^2}f_r(p,\omega_i\rarr\omega_r)L_i(p,\omega_i)\cos\theta_id\omega_i$，对各部分分别计算再累加
 
-  <img src="图片\QQ截图20231118201702.png" alt="QQ截图20231118201702" style="zoom: 33%;" />
+  <img src="images\20231118201702.png" alt="20231118201702" style="zoom: 33%;" />
 
 - 可逆，$f_r(\omega_r\rarr\omega_i)=f_r(\omega_i\rarr\omega_r)$
 
-  <img src="图片\QQ截图20231118201853.png" alt="QQ截图20231118201853" style="zoom:33%;" />
+  <img src="images\20231118201853.png" alt="20231118201853" style="zoom:33%;" />
 
 - 能量守恒，$\forall\omega_r\int_{H^2}f_r(p,\omega_i\rarr\omega_r)L_i(p,\omega_i)\cos\theta_id\omega_i\le1$
 
@@ -1216,17 +1216,17 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
       - Phase function相位函数确定散射介质如何散射
       - 选取光路后计算每个折射点受光源的影响
 
-      <img src="图片\QQ截图20231120222953.png" alt="QQ截图20231120222953" style="zoom:33%;" />
+      <img src="images\20231120222953.png" alt="20231120222953" style="zoom:33%;" />
 
     - Hair / fur / fiber (BCSDF)
 
       - Kajiya-Kay model
 
-      <img src="图片\QQ截图20231120223517.png" alt="QQ截图20231120223517" style="zoom:33%;" />
+      <img src="images\20231120223517.png" alt="20231120223517" style="zoom:33%;" />
 
       - Marschner model：直接反射R，穿透投射TT，穿透反射TRT
 
-        <img src="图片\QQ截图20231120223554.png" alt="QQ截图20231120223554" style="zoom:33%;" />
+        <img src="images\20231120223554.png" alt="20231120223554" style="zoom:33%;" />
 
       - Double Cylinder model：在原有的圆柱模型内部添加一个髓质Medulla的圆柱
 
@@ -1234,7 +1234,7 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
         >
         > 闫老师发明的，用在猩球崛起、狮子王中的毛发渲染上，拿到视觉效果提名
 
-        <img src="图片\QQ截图20231120224629.png" alt="QQ截图20231120224629" style="zoom:33%;" />
+        <img src="images\20231120224629.png" alt="20231120224629" style="zoom:33%;" />
 
     - Granular material：颗粒材质
 
@@ -1244,7 +1244,7 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
 
       - $L(x_o,\omega_o)=\int_A\int_{H^2}S(x_i,\omega_i,x_o,\omega_o)L_i(x_i,\omega_i)\cos\theta_id\omega_idA$
 
-      <img src="图片\QQ截图20231120225729.png" alt="QQ截图20231120225729" style="zoom: 50%;" />
+      <img src="images\20231120225729.png" alt="20231120225729" style="zoom: 50%;" />
 
       - Dipole Approximation：创造内部虚拟光源
 
@@ -1260,13 +1260,13 @@ $R(\theta)=R_0+(1-R_0)(1-\cos\theta)^5,\quad R_0=(\frac{n_1-n_2}{n_1+n_2})^2$
 
     - 法线分布NDF的改进，更加真实，由法线贴图得到法线分布NDF
 
-    <img src="图片\QQ截图20231120232718.png" alt="QQ截图20231120232718" style="zoom:33%;" />
+    <img src="images\20231120232718.png" alt="20231120232718" style="zoom:33%;" />
 
     - 最新的研究：波动光学，BRDF相比几何光学会有不连续的特性
 
-      <img src="图片\QQ截图20231120233141.png" alt="QQ截图20231120233141" style="zoom: 33%;" />
+      <img src="images\20231120233141.png" alt="20231120233141" style="zoom: 33%;" />
 
-      <img src="图片\QQ截图20231120233411.png" alt="QQ截图20231120233411" style="zoom:50%;" />
+      <img src="images\20231120233411.png" alt="20231120233411" style="zoom:50%;" />
 
   - 
       Procedural appearance：使用三维噪声函数生成纹理，即查即用
@@ -1280,13 +1280,13 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
 
 针孔相机成像没有深度，$FOV=2\arctan(\frac{h}{2f})$，h为传感器高度，f为焦距；一般默认传感器高度为35mm
 
-<img src="图片\QQ截图20231121095537.png" alt="QQ截图20231121095537" style="zoom:33%;" />
+<img src="images\20231121095537.png" alt="20231121095537" style="zoom:33%;" />
 
 **Exposure**：$H=T\times E$，时间*irradiance，影响光接收多少的因素：
 
 - 光圈aperture大小f-number / f-stop，写作FN或者F/N，N=1/光圈直径
 - 快门时间，运动模糊：在快门时间内快速运动产生模糊，也是在时间上采样的反走样补偿
-  - rolling shutter，因为快门打开的方向不同，图片中不同位置记录的是不同时间对于超高速物体会有异常
+  - rolling shutter，因为快门打开的方向不同，images中不同位置记录的是不同时间对于超高速物体会有异常
 - ISO gain感光度，后处理相乘的线性系数，放大信号的同时也会放大噪声
 
 为得到等价的曝光效果，f-stop翻倍时，快门时间要乘以4
@@ -1311,26 +1311,26 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
   - $\frac{C}{A}=\frac{d'}{z_i}=\frac{|z_s-z_i|}{z_i}$，其中z~s~为感光器距离
   - $C=A\frac{|z_s-z_i|}{z_i}=\frac{f}{N}\frac{|z_s-z_i|}{z_i}$光圈、焦距更大，更模糊
 
-  <img src="图片\QQ截图20231121110556.png" alt="QQ截图20231121110556" style="zoom:33%;" />
+  <img src="images\20231121110556.png" alt="20231121110556" style="zoom:33%;" />
 
 - Ray Tracing Ideal Thin Lenses，模拟薄透镜实现光线追踪
 
   - 定义感光器成像平面、透镜焦距和光圈大小，设置物距z~o~计算对应像距z~i~
   - 对每个成像平面像素点x'，采样透镜平面上的任意点x''，根据x'x''连线确定穿过透镜后hit的物体平面上的点x‘’‘
 
-  <img src="图片\QQ截图20231121110345.png" alt="QQ截图20231121110345" style="zoom: 50%;" />
+  <img src="images\20231121110345.png" alt="20231121110345" style="zoom: 50%;" />
 
 **Depth of Field**：实际不被模糊的深度
 
 使用大小光圈会影响CoC模糊的范围，规定CoC大小在一定范围内是清晰的，$DOF=D_F-D_N$，$D_F=\frac{D_Sf^2}{f^2-NC(D_S-f)},\quad D_N=\frac{D_Sf^2}{f^2+NC(D_S-f)}$
 
-<img src="图片\QQ截图20231121110831.png" alt="QQ截图20231121110831" style="zoom:33%;" />
+<img src="images\20231121110831.png" alt="20231121110831" style="zoom:33%;" />
 
 **Light Field / Lumigraph**：光场
 
 对于真实世界的观察等同于眼前的幕布（记录不同位置不同方向所看到的信息）
 
-<img src="图片\QQ截图20231121164202.png" alt="QQ截图20231121164202" style="zoom:33%;" />
+<img src="images\20231121164202.png" alt="20231121164202" style="zoom:33%;" />
 
 - The Plenoptic Function 全光函数：7D
 
@@ -1343,15 +1343,15 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
 
   - 进一步，已知光场函数可以将物体包围盒内视为黑盒，只关注表面
 
-  <img src="图片\QQ截图20231121163452.png" alt="QQ截图20231121163452" style="zoom:33%;" />
+  <img src="images\20231121163452.png" alt="20231121163452" style="zoom:33%;" />
 
   - 再进一步，为了参数化光场，通过在两个平行平面上取两个点来确定光线（2D位置+2D方向），找到所有的uv与st的组合即可得到所有光线
 
-    <img src="图片\QQ截图20231121164649.png" alt="QQ截图20231121164649" style="zoom: 25%;" />
+    <img src="images\20231121164649.png" alt="20231121164649" style="zoom: 25%;" />
 
   - 分别固定uv和st进行观察
 
-    <img src="图片\QQ截图20231121164950.png" alt="QQ截图20231121164950" style="zoom: 25%;" />
+    <img src="images\20231121164950.png" alt="20231121164950" style="zoom: 25%;" />
 
 - The Lytro Light Field Camera光场摄像机，对单个像素使用微透镜Microlens，分离来自不同方向的光，支持后期重新聚焦
 
@@ -1366,7 +1366,7 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
 
     > 能够进行各类操作的原因在于光场摄像机记录了所有光线的位置和方向
 
-    | <img src="图片\QQ截图20231121190829.png" alt="QQ截图20231121190829" style="zoom:25%;" /> | <img src="图片\QQ截图20231121191441.png" alt="QQ截图20231121191441" style="zoom:25%;" /> |
+    | <img src="images\20231121190829.png" alt="20231121190829" style="zoom:25%;" /> | <img src="images\20231121191441.png" alt="20231121191441" style="zoom:25%;" /> |
     | :----------------------------------------------------------: | :----------------------------------------------------------: |
 
   - 缺陷
@@ -1382,7 +1382,7 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
 - Oscillations of different frequencies，不同波长有不同折射率
 - Spectral Power Distribution (SPD)，光线在不同波长的不同强度，具有线性性Linearity（多光源SPD线性叠加）
 
-<img src="图片\QQ截图20231121193024.png" alt="QQ截图20231121193024" style="zoom: 33%;" />
+<img src="images\20231121193024.png" alt="20231121193024" style="zoom: 33%;" />
 
 **Biological Basis of Color**
 
@@ -1394,7 +1394,7 @@ Imaging = Synthesis (rasterize, path tracing) + Capture (camera)
     - S-Cone，M-Cone，L-Cone分别感知中频光线：感知低频光线：感知高频光线
     - 不同的人的三种细胞的分布不同
 
-<img src="图片\QQ截图20231121193552.png" alt="QQ截图20231121193552" style="zoom:25%;" />
+<img src="images\20231121193552.png" alt="20231121193552" style="zoom:25%;" />
 
 **Tristimulus Theory of Color**
 
@@ -1414,7 +1414,7 @@ $S=\int r_S(\lambda)s(\lambda)d\lambda,\quad M=\int r_M(\lambda)s(\lambda)d\lamb
 
   > 对应的减法颜色：调色板越调越黑，白色最纯，而在加法中白色最混
 
-<img src="图片\QQ截图20231121210136.png" alt="QQ截图20231121210136" style="zoom: 25%;" />
+<img src="images\20231121210136.png" alt="20231121210136" style="zoom: 25%;" />
 
 - 对于任意SPD的值，积分得到R, G, B的值，与细胞响应类似
 
@@ -1425,23 +1425,23 @@ $S=\int r_S(\lambda)s(\lambda)d\lambda,\quad M=\int r_M(\lambda)s(\lambda)d\lamb
   - 将XYZ归一化，将三维变量降为两维，固定Y的值得到x+y=1-z，进行可视化
   - 颜色空间所有可能表示的颜色即色域Gamut，不同的颜色空间能表示的色域范围不同
 
-| <img src="图片\QQ截图20231121211333.png" alt="QQ截图20231121211333" style="zoom:33%;" /> | <img src="图片\QQ截图20231121211708.png" alt="QQ截图20231121211708" style="zoom:33%;" /> |
+| <img src="images\20231121211333.png" alt="20231121211333" style="zoom:33%;" /> | <img src="images\20231121211708.png" alt="20231121211708" style="zoom:33%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 - Perceptually Organized颜色空间
 
   | HSV (Hue-Saturation-Value)颜色空间，自定义色调、饱和度、亮度 | CIELAB颜色空间，L为亮度，A为red-green，B为blue-yellow；以互补色作为对应（以人类感知确定互补色） |
   | :----------------------------------------------------------: | :----------------------------------------------------------: |
-  | <img src="图片\QQ截图20231121212313.png" alt="QQ截图20231121212313" style="zoom:33%;" /> | <img src="图片\QQ截图20231121212516.png" alt="QQ截图20231121212516" style="zoom:33%;" /> |
+  | <img src="images\20231121212313.png" alt="20231121212313" style="zoom:33%;" /> | <img src="images\20231121212516.png" alt="20231121212516" style="zoom:33%;" /> |
 
 - 颜色都是相对的，都是感知的
 
-  | <img src="图片\QQ截图20231121213446.png" alt="QQ截图20231121213446" style="zoom: 25%;" /> | <img src="图片\QQ截图20231121213604.png" alt="QQ截图20231121213604" style="zoom: 25%;" /> |
+  | <img src="images\20231121213446.png" alt="20231121213446" style="zoom: 25%;" /> | <img src="images\20231121213604.png" alt="20231121213604" style="zoom: 25%;" /> |
   | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 - CMYK: A Subtractive Color Space减色空间，C为蓝绿色，M为品红色，Y为黄色，K为黑色；通过混合CMY就可以得到K黑色，但是从打印成本上考虑需要加上K
 
-  <img src="图片\QQ截图20231121213807.png" alt="QQ截图20231121213807" style="zoom:33%;" />
+  <img src="images\20231121213807.png" alt="20231121213807" style="zoom:33%;" />
 
 ## Lecture 21 Animation
 
@@ -1463,17 +1463,17 @@ extension of modeling：场景模型关于时间的函数
 
 由美工画出关键帧，再由助手补帧；关键帧技术利用帧插值自动生成中间帧
 
-<img src="图片\QQ截图20231122100914.png" alt="QQ截图20231122100914" style="zoom:33%;" />
+<img src="images\20231122100914.png" alt="20231122100914" style="zoom:33%;" />
 
 **Physical Simulation**
 
 Physically Based  Animation：F=Ma，利用数值计算实现物理仿真$x^{t+\Delta t}=x^t+\Delta tv^t+\frac1 2(\Delta t)^2a^t$，如模拟布料的运动、流体的运动，头发的模拟
 
-<img src="图片\QQ截图20231122102356.png" alt="QQ截图20231122102356" style="zoom:33%;" />
+<img src="images\20231122102356.png" alt="20231122102356" style="zoom:33%;" />
 
 **Mass Spring System**质点弹簧系统：一系列相互连接的质点和弹簧
 
-<img src="图片\QQ截图20231122104213.png" alt="QQ截图20231122104213" style="zoom: 50%;" />
+<img src="images\20231122104213.png" alt="20231122104213" style="zoom: 50%;" />
 
 理想弹簧（没有长度）：$f_{a\rarr b}=k_s(\textbf b-\textbf a)=-\textbf f_{a\rarr b}$，胡克定律
 
@@ -1493,13 +1493,13 @@ Physically Based  Animation：F=Ma，利用数值计算实现物理仿真$x^{t+\
 
   |                              纸                              |                             网格                             |
   | :----------------------------------------------------------: | :----------------------------------------------------------: |
-  | <img src="图片\QQ截图20231122105305.png" alt="QQ截图20231122105305" style="zoom:33%;" /> | <img src="图片\QQ截图20231122105314.png" alt="QQ截图20231122105314" style="zoom:33%;" /> |
+  | <img src="images\20231122105305.png" alt="20231122105305" style="zoom:33%;" /> | <img src="images\20231122105314.png" alt="20231122105314" style="zoom:33%;" /> |
 
   > 然而该形状不能抵抗切变shearing，不能抵抗非平面的弯曲
 
   |               能抵抗切变，但不能抵抗非平面弯曲               |             能抵抗切变和非平面弯曲，红线的力很弱             |
   | :----------------------------------------------------------: | :----------------------------------------------------------: |
-  | <img src="图片\QQ截图20231122105911.png" alt="QQ截图20231122105911" style="zoom:33%;" /> | <img src="图片\QQ截图20231122110051.png" alt="QQ截图20231122110051" style="zoom:33%;" /> |
+  | <img src="images\20231122105911.png" alt="20231122105911" style="zoom:33%;" /> | <img src="images\20231122110051.png" alt="20231122110051" style="zoom:33%;" /> |
 
 **FEM (Finite Element Method)**有限元方法，擅长描述力传导过程
 
@@ -1565,13 +1565,13 @@ Blender shapes：在控制点之间进行插值
 
 光学捕捉设备：通过多摄像机捕捉markers位置，难以处理遮挡情况
 
-<img src="图片\QQ截图20231122160704.png" alt="QQ截图20231122160704" style="zoom:33%;" />
+<img src="images\20231122160704.png" alt="20231122160704" style="zoom:33%;" />
 
 恐怖谷效应Uncanny valley：生成的动画过于真实
 
 > 阿凡达首次使用面部动捕
 
-<img src="图片\QQ截图20231122161607.png" alt="QQ截图20231122161607" style="zoom: 33%;" />
+<img src="images\20231122161607.png" alt="20231122161607" style="zoom: 33%;" />
 
 ## Lecture 22 Animation cont.
 
@@ -1584,11 +1584,11 @@ Blender shapes：在控制点之间进行插值
   - 简单迭代，通用
   - 误差：每一步造成的误差不断累积，随模拟进程准确度不断降低
 
-  <img src="图片\QQ截图20231123102420.png" alt="QQ截图20231123102420" style="zoom: 33%;" />
+  <img src="images\20231123102420.png" alt="20231123102420" style="zoom: 33%;" />
 
   - 不稳定：误差的集合使得最终结果偏离真实
 
-  <img src="图片\QQ截图20231123102717.png" alt="QQ截图20231123102717" style="zoom:50%;" />
+  <img src="images\20231123102717.png" alt="20231123102717" style="zoom:50%;" />
 
   - 对抗不稳定：
 
