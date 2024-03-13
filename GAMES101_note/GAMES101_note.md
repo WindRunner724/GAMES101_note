@@ -7,14 +7,6 @@
 > 课程链接：[Lecture 01 Overview of Computer Graphics_bilibili](https://www.bilibili.com/video/BV1X7411F744?p=1&vd_source=c34dccbda969c45c32e942a0bfb4bbab)
 >
 > 课后作业：http://games-cn.org/forums/topic/allhw/
->
-> 后续计划：
->
-> 1. 光栅化：OpenGL，DirectX，着色器
->
-> 2. 几何：微分几何，离散微分几何
-> 3. 渲染：GAMES202
-> 4. 仿真：GAMES201
 
 - 第一周
   - [x] Lecture 01 Overview of Computer Graphics
@@ -103,23 +95,23 @@
   - scale缩放，即将几何图形上的每个点的坐标都分别乘以s倍
     $$
     \left[
-    \begin{array}1
+    \begin{matrix}
     x' \\
     y'
-    \end{array}
+    \end{matrix}
     \right]
     =
     \left[
-    \begin{array}2
+    \begin{matrix}
     s & 0\\
     0 & s \\
-    \end{array}
+    \end{matrix}
     \right]
     \left[
-    \begin{array}3
+    \begin{matrix}
     x \\
     y \\
-    \end{array}
+    \end{matrix}
     \right]
     $$
     
@@ -128,23 +120,23 @@
   - shear切变， 在x方向上的切变
     $$
     \left[
-    \begin{array}1
+    \begin{matrix}
     x' \\
     y'
-    \end{array}
+    \end{matrix}
     \right]
     =
     \left[
-    \begin{array}2
+    \begin{matrix}
     1 & a\\
     0 & 1 \\
-    \end{array}
+    \end{matrix}
     \right]
     \left[
-    \begin{array}3
+    \begin{matrix}
     x \\
     y \\
-    \end{array}
+    \end{matrix}
     \right]
     $$
   
@@ -152,10 +144,10 @@
     $$
     R_\theta=
     \left[
-    \begin{array}3
+    \begin{matrix}
     \cos\theta & -\sin\theta\\
     \sin\theta & \cos\theta \\
-    \end{array}
+    \end{matrix}
     \right]
     $$
   
@@ -164,30 +156,30 @@
   - 平移（**先应用线性变换，再平移**）
     $$
     \left[
-    \begin{array}1
+    \begin{matrix}
     x' \\
     y'
-    \end{array}
+    \end{matrix}
     \right]
     =
     \left[
-    \begin{array}2
+    \begin{matrix}
     a & b\\
     c & d\\
-    \end{array}
+    \end{matrix}
     \right]
     \left[
-    \begin{array}3
+    \begin{matrix}
     x \\
     y \\
-    \end{array}
+    \end{matrix}
     \right]
     +
     \left[
-    \begin{array}3
+    \begin{matrix}
     t_x \\
     t_y \\
-    \end{array}
+    \end{matrix}
     \right]
     $$
 
@@ -202,34 +194,34 @@
   - 平移变换表示：
     $$
     \left[
-    \begin{array}1
+    \begin{matrix}
     x' \\
     y' \\
     \omega'
-    \end{array}
+    \end{matrix}
     \right]
     =
     \left[
-    \begin{array}2
+    \begin{matrix}
     1 & 0 & t_x\\
     0 & 1 & t_y\\
     0 & 0 & 1
-    \end{array}
+    \end{matrix}
     \right]
     \left[
-    \begin{array}3
+    \begin{matrix}
     x \\
     y \\
     1
-    \end{array}
+    \end{matrix}
     \right]
     +
     \left[
-    \begin{array}3
+    \begin{matrix}
     x+t_x \\
     y+t_y \\
     1
-    \end{array}
+    \end{matrix}
     \right]
     $$
 
@@ -247,30 +239,30 @@
     $$
     R_x(\alpha)=
     \left[
-    \begin{array}1
+    \begin{matrix}
     1 & 0 & 0 & 0 \\
     0 & \cos\alpha & -\sin\alpha & 0\\
     0 & \sin\alpha & \cos\alpha & 0\\
     0 & 0 & 0 & 1
-    \end{array}
+    \end{matrix}
     \right]
     R_y(\alpha)=
     \left[
-    \begin{array}2
+    \begin{matrix}
     \cos\alpha & 0 & \sin\alpha & 0 \\
     0 & 1 & 0 & 0\\
     -\sin\alpha & 0 & \cos\alpha & 0\\
     0 & 0 & 0 & 1
-    \end{array}
+    \end{matrix}
     \right]
     R_z(\alpha)=
     \left[
-    \begin{array}3
+    \begin{matrix}
     \cos\alpha & -\sin\alpha & 0 & 0 \\
     \sin\alpha & \cos\alpha & 0 & 0\\
     0 & 0 & 1 & 0\\
     0 & 0 & 0 & 1
-    \end{array}
+    \end{matrix}
     \right]
     $$
 
@@ -322,12 +314,12 @@
           $$
           M_{persp\rarr ortho}=
           \left[
-          \begin{array}3
+          \begin{matrix}
           \frac{n}{f} & 0 & 0 & 0\\
           0 & \frac{n}{f} & 0 & 0 \\
           0 & 0 & \frac{n+f}{f} & -n \\
           0 & 0 & -\frac{1}{f} & 0
-          \end{array}
+          \end{matrix}
           \right]
           $$
           
@@ -350,12 +342,12 @@
   $$
   R_\theta=
   \left[
-  \begin{array}3
+  \begin{matrix}
   \frac{width}{2} & 0 & 0 & \frac{width}{2}\\
   0 & \frac{height}{2} & 0 & \frac{height}{2} \\
   0 & 0 & 1 & 0 \\
   0 & 0 & 0 & 1
-  \end{array}
+  \end{matrix}
   \right]
   $$
   
@@ -490,12 +482,14 @@
       - Light Fallof：点光源辐射，能量密度随距离衰减
     - Ambient lighting：间接光照
 
+  > Blinn-Phong模型的高光区别于Phong模型，使用半程向量与法线的点积作为权重，而Phong模型使用的是反射角与相机视角的点积作为权重，在高光项上Blinn-Phong模型更加真实
+
   计算局部一个点上的着色：视角方向$v$，平面法向量$n$，光照方向$l$，表面参数（color，shininess），不考虑阴影
 
   $L_d=k_d(I/r^2)\max(0,n\cdot l)$，$k_d$为漫反射颜色吸收系数（1为全吸收，0为不吸收全反射，为三通道系数时可定义着色点颜色），$I/r^2$为点光源辐射到达此处的能量
 
   漫反射的结果应与视角方向没有关系（向所有方向反射）
-
+  
   <img src="images\20231028102629.png" alt="20231028102629" style="zoom: 50%;" />
 
 ## Lecture 08 Shading 2 (Shading, Pipeline and Texture Mapping)
@@ -842,13 +836,13 @@
     
         <img src="images\20231107161003.png" alt="20231107161003" style="zoom:33%;" />
         
-      - 光线与AABB相交，2D情形下，分别计算与两个slab平面的交点$(t_\min,t_\max)$，计算两条线段的交集得到与AABB相交的区域
+      - 光线与AABB相交，2D情形下，分别计算与两个slab平面的交点$(t_{\min},t_{\max})$，计算两条线段的交集得到与AABB相交的区域
       
         <img src="images\20231107162155.png" alt="20231107162155" style="zoom:50%;" />
       
       - 光线与AABB相交，3D情形下，光线进入AABB等价于进入所有三对slabs，离开AABB等价于离开任意一对slabs
       
-        因此$t_{enter}=\max\{t_\min\},t_{exit}=\min\{t_\max\}$，即光线进入的时间为所有slabs中最迟进入的时间，光线离开的时间为所有slabs中最早离开的时间，$t_{enter}<t_{exit}$即判定光线与AABB相交
+        因此$t_{enter}=\max\{t_{\min}\},t_{exit}=\min\{t_{\max}\}$，即光线进入的时间为所有slabs中最迟进入的时间，光线离开的时间为所有slabs中最早离开的时间，$t_{enter}<t_{exit}$即判定光线与AABB相交
       
       - 时间$t$为负的情形
       
